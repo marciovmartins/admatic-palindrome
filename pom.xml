@@ -6,7 +6,6 @@
 	<packaging>jar</packaging>
 	<version>1.0-SNAPSHOT</version>
 	<name>palindrome</name>
-	<url>http://maven.apache.org</url>
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -25,4 +24,5 @@
 			<version>3.0.4</version>
 		</dependency>
 	</dependencies>
+	<url>https://github.com/marciovmartins/admatic-palindrome</url>
 </project>
