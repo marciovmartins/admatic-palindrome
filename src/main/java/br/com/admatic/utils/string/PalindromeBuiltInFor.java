@@ -1,6 +1,6 @@
 package br.com.admatic.utils.string;
 
-public class PalindromeStrategy1 extends Palindrome {
+public class PalindromeBuiltInFor extends Palindrome {
 	public boolean validate(String sentence) {
 		String normalizedSentence = cleanSentence(sentence);
 

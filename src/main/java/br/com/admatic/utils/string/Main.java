@@ -21,7 +21,7 @@ public class Main {
 		MongoCollection<Document> palindromes = mongoClient.getDatabase("test").getCollection("palindromes");
 		palindromes.drop();
 		
-		Palindrome palindrome = PalindromeFactory.createService(1); // 1- basic 'for'; 2- StringBuilder.reverse() 
+		Palindrome palindrome = PalindromeFactory.createService(PalindromeFactory.Strategy.BUILTIN_FOR); 
 
 		begin = System.nanoTime();
 		

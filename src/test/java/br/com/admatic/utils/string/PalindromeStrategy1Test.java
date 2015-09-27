@@ -8,7 +8,7 @@ public class PalindromeStrategy1Test extends PalindromeTest {
 
 	@Override
 	public Palindrome palindrome() {
-		return new PalindromeStrategy1();
+		return new PalindromeBuiltInFor();
 	}
 
 }
