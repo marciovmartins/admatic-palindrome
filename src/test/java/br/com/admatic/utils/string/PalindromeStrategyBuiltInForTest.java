@@ -1,8 +1,8 @@
 package br.com.admatic.utils.string;
 
-public class PalindromeStrategy1Test extends PalindromeTest {
+public class PalindromeStrategyBuiltInForTest extends PalindromeTest {
 
-	public PalindromeStrategy1Test(String testName) {
+	public PalindromeStrategyBuiltInForTest(String testName) {
 		super(testName);
 	}
 

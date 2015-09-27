@@ -1,8 +1,8 @@
 package br.com.admatic.utils.string;
 
-public class PalindromeStrategy2Test extends PalindromeTest {
+public class PalindromeStrategyStringBuilderReverseTest extends PalindromeTest {
 
-	public PalindromeStrategy2Test(String testName) {
+	public PalindromeStrategyStringBuilderReverseTest(String testName) {
 		super(testName);
 	}
 
