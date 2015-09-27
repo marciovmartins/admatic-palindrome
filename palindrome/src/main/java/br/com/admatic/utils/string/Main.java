@@ -31,7 +31,7 @@ public class Main {
 			String line;
 			while ((line = br.readLine()) != null) {
 				palindromes.insertOne(
-						new Document().append("_id", line).append("isPalindrome", PalindromeStrategy1.validate(line)));
+						new Document().append("_id", line).append("palindrome", PalindromeStrategy1.validate(line)));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
