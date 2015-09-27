@@ -23,6 +23,7 @@ public class Palindrome {
 	private static String cleanSentence(String sentence) {
 		return Normalizer.normalize(sentence, Normalizer.Form.NFD)
 				.replaceAll("\\p{M}", "")
-				.replaceAll("\\s+","");
+				.replaceAll("\\s+","")
+				.toLowerCase();
 	}
 }
