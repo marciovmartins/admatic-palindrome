@@ -23,4 +23,10 @@ public class PalindromeTest extends TestCase {
 		assertFalse(Palindrome.validate("admatic"));
 		assertFalse(Palindrome.validate("marcio"));
 	}
+	
+	public void testIsPalindromeWithSentences() {
+		assertTrue(Palindrome.validate("a caca"));
+		assertTrue(Palindrome.validate("a caça"));
+		assertTrue(Palindrome.validate("ato idiota"));
+	}
 }
