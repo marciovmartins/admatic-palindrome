@@ -33,5 +33,6 @@ public class PalindromeTest extends TestCase {
 	
 	public void testIsPalindromeWithPunctuation() {
 		assertTrue(Palindrome.validate("A mil... Baita...Katia B. Lima"));
+		assertTrue(Palindrome.validate("Anita, a tina!"));
 	}
 }
