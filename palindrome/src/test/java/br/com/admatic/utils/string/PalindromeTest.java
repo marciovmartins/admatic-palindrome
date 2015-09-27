@@ -14,25 +14,25 @@ public class PalindromeTest extends TestCase {
 	}
 
 	public void testIsPalindromeWithOneWord() {
-		assertTrue(Palindrome.validate("ovo"));
-		assertTrue(Palindrome.validate("omissíssimo"));
-		assertTrue(Palindrome.validate("somávamos"));
-		assertTrue(Palindrome.validate("Mussum"));
+		assertTrue(PalindromeStrategy1.validate("ovo"));
+		assertTrue(PalindromeStrategy1.validate("omissíssimo"));
+		assertTrue(PalindromeStrategy1.validate("somávamos"));
+		assertTrue(PalindromeStrategy1.validate("Mussum"));
 	}
 	
 	public void testIsNotPalindromeWithOneWord() {
-		assertFalse(Palindrome.validate("admatic"));
-		assertFalse(Palindrome.validate("marcio"));
+		assertFalse(PalindromeStrategy1.validate("admatic"));
+		assertFalse(PalindromeStrategy1.validate("marcio"));
 	}
 	
 	public void testIsPalindromeWithSentences() {
-		assertTrue(Palindrome.validate("a caca"));
-		assertTrue(Palindrome.validate("a caça"));
-		assertTrue(Palindrome.validate("ato idiota"));
+		assertTrue(PalindromeStrategy1.validate("a caca"));
+		assertTrue(PalindromeStrategy1.validate("a caça"));
+		assertTrue(PalindromeStrategy1.validate("ato idiota"));
 	}
 	
 	public void testIsPalindromeWithPunctuation() {
-		assertTrue(Palindrome.validate("A mil... Baita...Katia B. Lima"));
-		assertTrue(Palindrome.validate("Anita, a tina!"));
+		assertTrue(PalindromeStrategy1.validate("A mil... Baita...Katia B. Lima"));
+		assertTrue(PalindromeStrategy1.validate("Anita, a tina!"));
 	}
 }
