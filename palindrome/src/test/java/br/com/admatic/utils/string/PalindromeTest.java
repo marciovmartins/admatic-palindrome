@@ -13,8 +13,9 @@ public class PalindromeTest extends TestCase {
 		return new TestSuite(PalindromeTest.class);
 	}
 
-	public void testIsPalindrome() {
+	public void testIsPalindromeWithOneWord() {
 		assertTrue(Palindrome.validate("ovo"));
 		assertTrue(Palindrome.validate("omissíssimo"));
+		assertTrue(Palindrome.validate("somávamos"));
 	}
 }
