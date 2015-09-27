@@ -21,15 +21,15 @@ public class Main {
 		MongoCollection<Document> palindromes = mongoClient.getDatabase("test").getCollection("palindromes");
 		palindromes.drop();
 		
-		Palindrome palindrome = PalindromeFactory.createService(1);
+		Palindrome palindrome = PalindromeFactory.createService(1); // 1- basic 'for'; 2- StringBuilder.reverse() 
 
 		begin = System.nanoTime();
 		
 		try (BufferedReader br = new BufferedReader(new FileReader(FILE))) {
-			String line;
-			while ((line = br.readLine()) != null) {
+			String sentence;
+			while ((sentence = br.readLine()) != null) {
 				palindromes.insertOne(
-						new Document().append("_id", line).append("palindrome", palindrome.validate(line)));
+						new Document().append("_id", sentence).append("palindrome", palindrome.validate(sentence)));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();
