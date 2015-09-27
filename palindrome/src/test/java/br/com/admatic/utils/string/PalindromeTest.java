@@ -30,4 +30,8 @@ public class PalindromeTest extends TestCase {
 		assertTrue(Palindrome.validate("a caça"));
 		assertTrue(Palindrome.validate("ato idiota"));
 	}
+	
+	public void testIsPalindromeWithPunctuation() {
+		assertTrue(Palindrome.validate("A mil... Baita...Katia B. Lima"));
+	}
 }
