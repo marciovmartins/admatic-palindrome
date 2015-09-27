@@ -3,16 +3,12 @@ package br.com.admatic.utils.string;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
 
 public class Main {
 
@@ -24,6 +20,8 @@ public class Main {
 		MongoClient mongoClient = new MongoClient();
 		MongoCollection<Document> palindromes = mongoClient.getDatabase("test").getCollection("palindromes");
 		palindromes.drop();
+		
+		Palindrome palindrome = PalindromeFactory.createService(1);
 
 		begin = System.nanoTime();
 		
@@ -31,7 +29,7 @@ public class Main {
 			String line;
 			while ((line = br.readLine()) != null) {
 				palindromes.insertOne(
-						new Document().append("_id", line).append("palindrome", PalindromeStrategy1.validate(line)));
+						new Document().append("_id", line).append("palindrome", palindrome.validate(line)));
 			}
 		} catch (IOException e) {
 			e.printStackTrace();

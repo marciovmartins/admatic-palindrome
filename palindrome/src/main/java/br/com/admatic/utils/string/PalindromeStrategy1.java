@@ -1,7 +1,7 @@
 package br.com.admatic.utils.string;
 
 public class PalindromeStrategy1 extends Palindrome {
-	public static boolean validate(String sentence) {
+	public boolean validate(String sentence) {
 		String normalizedSentence = cleanSentence(sentence);
 
 		int length = normalizedSentence.length();
